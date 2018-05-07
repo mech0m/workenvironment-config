@@ -4,9 +4,9 @@
 [submodule "termite-install"]
 	path = termite-install
 	url = https://github.com/Corwind/termite-install.git
-[submodule "zsh/agkozak-zsh-theme"]
-	path = zsh/agkozak-zsh-theme
-	url = https://github.com/agkozak/agkozak-zsh-theme
 [submodule "zsh/zsh-syntax-highlighting"]
 	path = zsh/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
+[submodule "zsh/agkozak-zsh-theme"]
+	path = zsh/agkozak-zsh-theme
+	url = git@github.com:mech0m/agkozak-zsh-theme.git
