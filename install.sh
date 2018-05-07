@@ -13,7 +13,7 @@ UBUNTU_PACKAGE_LIST=("scrot ranger fonts-font-awesome i3status i3lock dmenu libx
                     "libxcb-xinerama0-dev libxcb-xkb-dev libxkbcommon-dev "
                     "ibxkbcommon-x11-dev autoconf libxcb-xrm-dev "
                     "neovim curl python-dev python-pip python3-dev "
-                    "python3-pip")
+                    "python3-pip zip")
 UBUNTU_PACKAGE_LIST=${UBUNTU_PACKAGE_LIST[*]}
 
 add_ppa() {
@@ -89,6 +89,11 @@ then
 
     cd /tmp
     rm -fr i3-gaps
+
+    #echo "[installing] language-tool"
+    #wget "https://languagetool.org/download/LanguageTool-4.1.zip"
+    #unzip LanguageTool-4.1.zip
+    #cd LanguageTool-4.1 
 
     echo [installing] termite
 
