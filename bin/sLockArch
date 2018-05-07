@@ -1,0 +1,17 @@
+#!/bin/bash
+
+swaygrab /tmp/screen.png
+convert /tmp/screen.png -paint 2  /tmp/screen.png
+
+swaylock -i /tmp/screen.png -f
+
+while true
+do
+	sleep 30
+	if [ -n "$(pidof swaylock)" ]
+	then
+		systemctl suspend
+	else
+		exit 0
+	fi
+done
