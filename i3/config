@@ -6,6 +6,7 @@
 #
 
 exec --no-startup-id /usr/bin/setxkbmap -option "caps:swapescape"
+exec --no-startup-id /usr/bin/blueman-applet
 
 ### Variables
 #
