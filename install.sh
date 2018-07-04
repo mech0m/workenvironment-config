@@ -5,7 +5,7 @@ echo Try to detect Operating system
 INSTALLER_DIR=$PWD
 
 IS_UBUNTU='false'
-UBUNTU_PPA_LIST="aguignard/ppa neovim-ppa/unstable"
+UBUNTU_PPA_LIST="aguignard/ppa neovim-ppa/unstable phoerious/keepassxc"
 UBUNTU_PACKAGE_LIST=("scrot ranger fonts-font-awesome i3status i3lock dmenu libxcb1-dev libxcb-keysyms1-dev "
                     "ibpango1.0-dev libxcb-util0-dev libxcb-icccm4-dev "
                     "ibyajl-dev libstartup-notification0-dev "
@@ -13,7 +13,7 @@ UBUNTU_PACKAGE_LIST=("scrot ranger fonts-font-awesome i3status i3lock dmenu libx
                     "libxcb-xinerama0-dev libxcb-xkb-dev libxkbcommon-dev "
                     "ibxkbcommon-x11-dev autoconf libxcb-xrm-dev "
                     "neovim curl python-dev python-pip python3-dev "
-                    "python3-pip zip")
+                    "python3-pip zip zathura-djvu aspell-de keepassxc")
 UBUNTU_PACKAGE_LIST=${UBUNTU_PACKAGE_LIST[*]}
 
 add_ppa() {
