@@ -1,7 +1,5 @@
 #!/bin/bash
 
-echo Try to detect Operating system
-
 INSTALLER_DIR=$PWD
 
 IS_UBUNTU='false'
@@ -105,13 +103,7 @@ then
 
 
 else
-    sudo pacman -S ttf-font-awesome
-
-    echo install sLock
-    sudo ln $PWD/bin/sLockArch /usr/local/bin/sLock
-    sudo chmod a+x /usr/local/bin/sLock
-
-    echo "Not implemented yet Arch linux specific installation"
+    echo "NOT a UBUNTU system: Only linking config directories"
 fi
 
 
