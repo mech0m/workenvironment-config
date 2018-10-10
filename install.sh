@@ -100,7 +100,7 @@ then
     cd $INSTALLER_DIR
 
     echo install sLock
-    sudo ln $PWD/bin/sLockUbuntu /usr/local/bin/sLock
+    sudo ln -ls $PWD/bin/sLockUbuntu /usr/local/bin/sLock
     sudo chmod a+x /usr/local/bin/sLock
 
 
