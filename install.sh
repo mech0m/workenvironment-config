@@ -7,11 +7,11 @@ INSTALLER_DIR=$PWD
 IS_UBUNTU='false'
 UBUNTU_PPA_LIST="aguignard/ppa neovim-ppa/unstable phoerious/keepassxc"
 UBUNTU_PACKAGE_LIST=("scrot ranger fonts-font-awesome i3status i3lock dmenu libxcb1-dev libxcb-keysyms1-dev "
-                    "ibpango1.0-dev libxcb-util0-dev libxcb-icccm4-dev "
-                    "ibyajl-dev libstartup-notification0-dev "
-                    "ibxcb-randr0-dev libev-dev libxcb-cursor-dev "
+                    "libpango1.0-dev libxcb-util0-dev libxcb-icccm4-dev "
+                    "libyajl-dev libstartup-notification0-dev "
+                    "libxcb-randr0-dev libev-dev libxcb-cursor-dev "
                     "libxcb-xinerama0-dev libxcb-xkb-dev libxkbcommon-dev "
-                    "ibxkbcommon-x11-dev autoconf libxcb-xrm-dev "
+                    "libxkbcommon-x11-dev autoconf libxcb-xrm-dev "
                     "neovim curl python-dev python-pip python3-dev "
                     "python3-pip zip zathura-djvu aspell-de keepassxc")
 UBUNTU_PACKAGE_LIST=${UBUNTU_PACKAGE_LIST[*]}
@@ -46,7 +46,6 @@ then
     echo $UBUNTU_PPA_LIST
     echo Packages to install
     echo $UBUNTU_PACKAGE_LIST
-    read
 
     add_ppa $UBUNTU_PPA_LIST
     sudo apt-get update
@@ -66,7 +65,6 @@ then
         fi
     done
 
-    read
 
     echo "[installing] i3-gaps"
     cd /tmp
