@@ -113,7 +113,9 @@ ln -is $PWD/nvim       $PWD/..
 ln -is $PWD/i3status   $PWD/..
 ln -is $PWD/sway       $PWD/..
 ln -is $PWD/i3         $PWD/..
-ln     $PWD/zsh/.zshrc ~/
+ln -is $PWD/zsh/.zshrc ~/
+ln -is $PWD/spacemacs/emacs.d    ~/.emacs.d
+ln -is $PWD/spacemacs/config.el  ~/.spacemacs
 
 echo get submodules
 git submodule update --init --recursive
