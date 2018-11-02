@@ -10,3 +10,6 @@
 [submodule "zsh/agkozak-zsh-theme"]
 	path = zsh/agkozak-zsh-theme
 	url = git@github.com:mech0m/agkozak-zsh-theme.git
+[submodule "spacemacs/emacs.d"]
+	path = spacemacs/emacs.d
+	url = https://github.com/syl20bnr/spacemacs
