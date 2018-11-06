@@ -22,11 +22,11 @@ set $term termite
 # Your preferred application launcher
 set $menu dmenu_run
 
-exec  termite --name=termite_ranger --exec=ranger
+exec xterm -name ranger  -fa "Source Code Pro" -fs 10  -e ranger
 
-bindsym F12 exec  termite --name=termite_ranger --exec=ranger
-for_window [instance="termite_ranger"] move to scratchpad
-bindsym $mod+o [instance="termite_ranger"] scratchpad show
+bindsym F12 exec xterm -name ranger  -fa "Source Code Pro" -fs 10  -e ranger
+for_window [instance="ranger"] move to scratchpad
+bindsym $mod+o [instance="ranger"] scratchpad show
 
 bindsym Ctrl+Print exec scrot
 
