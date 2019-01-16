@@ -22,7 +22,7 @@ call dein#add('vim-scripts/taglist.vim')
 call dein#add('vim-scripts/ctags.vim')
 call dein#add('vim-scripts/LanguageTool')
 
-let g:languagetool_jar='/opt/LanguageTool-3.8/languagetool-commandline.jar'
+let g:languagetool_jar='/opt/LanguageTool-4.4/languagetool-commandline.jar'
 let g:languagetool_disable_rules='DASH_RULE,EN_QUOTES,WHITESPACE_RULE,COMMA_PARENTHESIS_WHITESPACE,EN_UNPAIRED_BRACKETS,MORFOLOGIK_RULE_EN_US'
 
 call dein#add('vim-scripts/ctags.vim')
