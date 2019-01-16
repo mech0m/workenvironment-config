@@ -22,11 +22,18 @@ set $term termite
 # Your preferred application launcher
 set $menu dmenu_run
 
-exec xterm -name ranger  -fa "Source Code Pro" -fs 10  -e ranger
+exec xterm -name ranger  -fa "Source Code Pro" -fs 8  -e ranger
 
-bindsym F12 exec xterm -name ranger  -fa "Source Code Pro" -fs 10  -e ranger
+bindsym F12 exec xterm -name ranger  -fa "Source Code Pro" -fs 8  -e ranger
 for_window [instance="ranger"] move to scratchpad
 bindsym $mod+o [instance="ranger"] scratchpad show
+
+exec xterm -name TermTmux  -fa "Source Code Pro" -fs 8  -e "bash -c tmux"
+
+bindsym F10 exec xterm -name TermTmux  -fa "Source Code Pro" -fs 8  -e "bash -c tmux"
+for_window [instance="TermTmux"] move to scratchpad
+bindsym $mod+u [instance="TermTmux"] scratchpad show
+
 
 bindsym Ctrl+Print exec scrot
 
