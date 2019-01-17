@@ -11,7 +11,7 @@ UBUNTU_PACKAGE_LIST=("scrot ranger fonts-font-awesome i3status i3lock dmenu libx
                     "libxcb-xinerama0-dev libxcb-xkb-dev libxkbcommon-dev "
                     "libxkbcommon-x11-dev autoconf libxcb-xrm-dev "
                     "neovim curl python-dev python-pip python3-dev "
-                    "python3-pip zip zathura-djvu aspell-de keepassxc")
+                    "python3-pip zip zathura-djvu aspell-de keepassxc pnmixer tmux")
 UBUNTU_PACKAGE_LIST=${UBUNTU_PACKAGE_LIST[*]}
 
 add_ppa() {
