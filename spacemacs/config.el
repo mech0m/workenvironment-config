@@ -33,6 +33,7 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
+     html
      graphviz
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
@@ -65,7 +66,7 @@ values."
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
-     ;; spell-checking
+     (spell-checking :variables spell-checking-enable-by-default nil)
      ;; syntax-checking
      version-control
      auto-completion
@@ -342,6 +343,11 @@ you should place your code here."
   ;; Matlab settings
   (setq matlab-shell-command-switches '("-nodesktop -nosplash"))
 
+  (push "/usr/local/share/maxima/5.42.2/emacs" load-path)
+  (autoload 'imaxima "imaxima" "Maxima frontend" t)
+  (autoload 'imath "imath" "Interactive Math mode" t)
+
+
  )
 
 ;; Do not write anything past this comment. This is where Emacs will
@@ -353,7 +359,11 @@ you should place your code here."
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (thrift stan-mode scad-mode qml-mode julia-mode arduino-mode git-gutter-fringe git-gutter-fringe+ fringe-helper git-gutter+ git-gutter diff-hl yapfify ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline smeargle restart-emacs rainbow-delimiters pyvenv pytest pyenv-mode py-isort popwin pip-requirements persp-mode pcre2el paradox orgit org-bullets open-junk-file neotree move-text mmm-mode matlab-mode markdown-toc magit-gitflow macrostep lorem-ipsum live-py-mode linum-relative link-hint indent-guide hy-mode hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-themes helm-swoop helm-pydoc helm-projectile helm-mode-manager helm-make helm-gitignore helm-flx helm-descbinds helm-company helm-c-yasnippet helm-ag google-translate golden-ratio gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link gh-md fuzzy flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu elisp-slime-nav dumb-jump disaster diminish define-word cython-mode company-statistics company-c-headers company-auctex company-anaconda column-enforce-mode cmake-mode clean-aindent-mode clang-format bracketed-paste auto-yasnippet auto-highlight-symbol auto-compile auctex-latexmk aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line ac-ispell))))
+    ))
+ '(safe-local-variable-values
+   (quote
+    ((TeX-command-extra-options . "-shell-escape -f")
+     (TeX-command-extra-options . "-shell-escape")))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

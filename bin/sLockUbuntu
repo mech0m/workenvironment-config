@@ -8,7 +8,7 @@ i3lock -i /tmp/screen.png -f
 while true
 do
 	sleep 30
-	if [ -n "$(pidof swaylock)" ]
+	if [ -n "$(pidof i3lock)" ]
 	then
 		systemctl suspend
 	else
