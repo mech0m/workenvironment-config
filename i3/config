@@ -29,11 +29,11 @@ bindsym F12 exec xterm -name ranger  -fa "Source Code Pro" -fs 8  -e ranger
 for_window [instance="ranger"] move to scratchpad
 bindsym $mod+o [instance="ranger"] scratchpad show
 
-exec xterm -name TermTmux  -fa "Source Code Pro" -fs 8  -e "bash -c tmux"
+exec termite --name=termite_tmux   --exec "bash -c tmux"
 
-bindsym F10 exec xterm -name TermTmux  -fa "Source Code Pro" -fs 8  -e "bash -c tmux"
-for_window [instance="TermTmux"] move to scratchpad
-bindsym $mod+u [instance="TermTmux"] scratchpad show
+bindsym F10 exec termite --name=termite_tmux   --exec "bash -c tmux"
+for_window [instance="termite_tmux"] move to scratchpad
+bindsym $mod+u [instance="termite_tmux"] scratchpad show
 
 
 bindsym Ctrl+Print exec scrot
