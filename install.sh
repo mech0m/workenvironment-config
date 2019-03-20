@@ -3,15 +3,16 @@
 INSTALLER_DIR=$PWD
 
 IS_UBUNTU='false'
-UBUNTU_PPA_LIST="aguignard/ppa neovim-ppa/unstable phoerious/keepassxc"
+UBUNTU_PPA_LIST="aguignard/ppa neovim-ppa/unstable phoerious/keepassxc ppa:kelleyk/emacs"
 UBUNTU_PACKAGE_LIST=("scrot ranger fonts-font-awesome i3status i3lock dmenu libxcb1-dev libxcb-keysyms1-dev "
                     "libpango1.0-dev libxcb-util0-dev libxcb-icccm4-dev "
                     "libyajl-dev libstartup-notification0-dev "
                     "libxcb-randr0-dev libev-dev libxcb-cursor-dev "
                     "libxcb-xinerama0-dev libxcb-xkb-dev libxkbcommon-dev "
                     "libxkbcommon-x11-dev autoconf libxcb-xrm-dev "
+                    "latexmk texlive-full"
                     "neovim curl python-dev python-pip python3-dev "
-                    "python3-pip zip zathura-djvu aspell-de keepassxc pnmixer tmux")
+                    "python3-pip zip zathura-djvu aspell-de keepassxc pnmixer tmux ctags emacs26")
 UBUNTU_PACKAGE_LIST=${UBUNTU_PACKAGE_LIST[*]}
 
 add_ppa() {
